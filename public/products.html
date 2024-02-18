@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/product.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+        <div class="main-wrapper">
+            <div class="navbar">
+                <div class="logo">
+                    <h1>Gadget Glory</h1>
+                </div>
+                <div class="tabs"><a href="index.html">Home</a><a href="products.html">Techy Gadgets</a><a href="">Home Gadgets</a><a
+                        href="">Personal Care</a> <a href="">More <i class="ri-arrow-drop-down-line"></i></a>
+                    <div class="rightnav">
+                        <h3>USD $</h3>
+                        <div class="vertline"></div>
+                        <h3>United States</h3> <i class="ri-search-2-line"></i> <i class="ri-shopping-bag-3-line"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="image">
+            <img id="product-image" src="{{productImage}}" alt="Product Image">
+        </div>
+            <div class="right">
+                <div class="upper">
+            <h1 id="product-title">{{productTitle}}</h1>
+            <h3>Brand: Gadget Glory</h3>
+            <h4>500+ Sold in last month!</h4>
+        </div>
+        <div class="pricing">
+            <h3 id="price"><s>114.99$</s> {{productPrice}}</h3>
+            <p>Inclusive of all taxes</p>
+        </div>
+        <div class="offers">
+            <div class="circles">
+                <img src="https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/trust_icon_free_shipping_81px._CB630870460_.png" alt="">
+           <div class="int"><p>Free Delivery</p></div>
+            </div>
+            <div class="circles">
+                <img src="https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-returns._CB484059092_.png" alt="">
+                <div class="int"><p>10 days <br>Returnable</p></div> </div>
+            <div class="circles">
+                <img src="https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/Secure-payment._CB650126890_.png" alt="">
+                <div class="int"><p>Secure Transaction</p></div>
+            </div>
+        </div>
+        <ul id="cart-items"></ul>
+        <div class="buyadd">
+            <button id="addToCartButton" data-product-id="{{productId}}">Add to Cart <i class="ri-shopping-cart-2-line"></i></button>
+            <button id="buyNowButton" data-product-id="{{productId}}">Buy Now <i class="ri-bank-card-line"></i></button>
+        </div>
+        <h3 id="button">Product Description <i class="ri-arrow-down-s-line"></i></h3>
+        <div id="desc">
+        <h4 id="product-description">{{productDescription}}</h4>
+    </div>
+        </div>
+    </div>
+        </div>
+        <script>
+            document.getElementById('button').addEventListener('click', function(){
+              var descElements =  document.getElementById('desc');
+              if(descElements.style.display === 'block'){
+                descElements.style.display = 'none'
+              }
+              else if(descElements.style.display === 'none'){
+                descElements.style.display = 'block'
+              }
+              else {
+                descElements.style.display = 'none'
+              }
+            });
+            document.getElementById('buyNowButton').addEventListener('click', function() {
+                var url = window.location.pathname; 
+                var productId = url.split('/').pop(); 
+                window.location.href = '/order/' + productId; 
+            });
+            document.getElementById('addToCartButton').addEventListener('click', function() {
+                var url = window.location.pathname;
+                var productId = url.split('/').pop(); 
+            
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '/cart', true);
+                xhr.setRequestHeader('Content-Type', 'application/json');
+            
+                xhr.send(JSON.stringify({
+                    productId: productId
+                }));
+            
+                xhr.onload = function () {
+                    if (xhr.status === 200) {
+                        alert('Product added to cart');
+                    } else {
+                        alert('Error adding product to cart');
+                    }
+                };
+            });
+            
+        </script>
+        <script src="/js/products.js"></script>
+</body>
+</html>

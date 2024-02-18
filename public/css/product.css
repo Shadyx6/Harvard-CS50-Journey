@@ -1,0 +1,220 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+.navbar{
+    height: 80px;
+    width: 100%;
+    background-color: #F5F5DC;
+    display: flex;
+    align-items: center;
+    
+   
+}
+.logo{
+    margin-left: 50px;
+}
+.logo h1{
+    white-space: nowrap;
+    font-family: main;
+    font-size: 30px;
+    font-weight: 300;
+}
+.tabs{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-right: 170px;
+}
+.tabs a{
+    font-size: 13px;
+    font-family: heads;
+    text-decoration: none;
+    color: black;
+   
+
+}
+.navbar a:hover{
+    text-decoration: underline;
+}
+.rightnav{
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 10px;
+    gap: 5px;
+}
+.rightnav h3{
+    font-size: 15px;
+    font-family: heads;
+    font-weight: 200;
+}
+.vertline{
+    background-color: black;
+    height: 18px;
+    width: 2px;
+}
+.rightnav i{
+    text-align: center;
+    font-size: 17px;
+    margin-left: 10px;
+}
+#product-title{
+    margin-top: 50px;
+    font-weight: 700;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 35px;
+}
+#product-description{
+
+    width: 700px;
+    font-size: 20px;
+    font-weight: 100;
+    word-spacing: 10px;
+   line-height: 30px;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#product-image{
+    
+    transform: scale(0.5);
+}
+.image{
+    position: absolute;
+    top: -10%;
+    left: -12%;
+}
+.upper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation-name: texts;
+    animation-duration: 2s;
+}
+.right{
+    position: absolute;
+    top: 7%;
+    left: 45%;
+}
+.upper h3{
+    color: blue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+}
+.upper h4{
+    color: gray;
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.pricing{
+    box-shadow: 0px 0px 10px 0px rgba(255, 0, 0, 0.9);
+    width: 250px;
+    height: fit-content;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10PX;
+    animation-name: intro;
+    animation-duration: 2s;
+    margin-top: 10px;
+
+}
+.pricing h3{
+    font-size: 26px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+}
+@keyframes intro {
+    0%{
+        transform: translateX(800px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+@keyframes texts {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+.offers{
+    margin-left: 100px;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    height: 100px;
+    align-items: center;
+    width: fit-content;
+    justify-content: space-around;
+    gap: 40px;
+    animation-name: texts;
+    animation-duration: 5s;
+    margin-top: 10px;
+}
+.circles{
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.circles img{
+    transform: scale(0.5);
+}
+.int p{
+    color: rgb(2, 2, 255, 0.9);
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 10px;
+}
+.buyadd{
+display: flex;
+gap: 40px;
+margin-left: 100px;
+margin-top: 0px;
+}
+.buyadd button{
+background-color: black;
+color: white;
+text-align: center;
+padding: 10px 20px;
+font-size: 24px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+border-radius: 10px;
+transition: all ease 1s;
+}
+.buyadd #addToCartButton{
+background-color: #F5F5DC;
+color: black;
+font-size: 30px;
+}
+.buyadd button:hover{
+transform: scale(1.2);
+}
+#desc{
+display: none;
+}
+#button{
+    margin-top: 20px;
+    font-size: 10px;
+cursor: pointer;
+color: green;
+}
+#product-description{
+    font-size: 10px;
+    word-spacing: 2px;
+    max-width: 500px;
+}

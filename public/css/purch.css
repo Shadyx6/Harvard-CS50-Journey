@@ -1,0 +1,132 @@
+.holder{
+    position: absolute;
+    top: 50%;
+    
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+.navbar{
+    
+    height: 120px;
+    width: 100%;
+    background-color: #F5F5DC;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+.logo{
+    margin-left: 100px;
+}
+.logo h1{
+    white-space: nowrap;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 45px;
+    font-weight: 600;
+}
+.tabs{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-right: 140px;
+}
+.tabs a{
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    color: black;
+
+}
+.navbar a:hover{
+    text-decoration: underline;
+}
+.rightnav{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    margin-left: 200px;
+
+}
+.rightnav h3{
+    font-size: 20px;
+    font-family: heads;
+    font-weight: 200;
+}
+.vertline{
+    background-color: black;
+    height: 20px;
+    width: 2px;
+}
+.rightnav i{
+    font-size: 25px;
+    margin-left: 10px;
+    
+}
+.content{
+    display: flex;
+    gap: 30px;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+h1{
+    padding: 0px 20px;
+}
+.footer{
+    margin-top: 40px;
+}
+img{
+   height: 200px;
+   width: 200px;
+   border-radius: 25px;
+}
+.section{
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 25px;
+}
+.right{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    border: 4px solid black;
+    padding: 20px 20px;
+}
+.right h1{
+    font-size: 20px;
+}
+label{
+    font-size: 20PX;
+    margin-top: 30px;
+}
+input{
+    width: 500px;
+}
+.button{
+    width: fit-content;
+    padding: 10px 10px;
+    background-color: black;
+    border-radius: 25px;
+    color: white;
+    margin-top: 20px;
+    margin-left: 180px;
+    font-size: 25px;
+}
+.post{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}

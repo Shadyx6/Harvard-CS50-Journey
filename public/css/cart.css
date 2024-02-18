@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+.navbar{
+    height: 80px;
+    width: 100%;
+    background-color: #F5F5DC;
+    display: flex;
+    align-items: center;
+    
+   
+}
+.logo{
+    margin-left: 50px;
+}
+.logo h1{
+    white-space: nowrap;
+    font-family: main;
+    font-size: 30px;
+    font-weight: 300;
+}
+.tabs{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-right: 170px;
+}
+.tabs a{
+    font-size: 13px;
+    font-family: heads;
+    text-decoration: none;
+    color: black;
+   
+
+}
+.navbar a:hover{
+    text-decoration: underline;
+}
+.rightnav{
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 10px;
+    gap: 5px;
+}
+.rightnav h3{
+    font-size: 15px;
+    font-family: heads;
+    font-weight: 200;
+}
+.vertline{
+    background-color: black;
+    height: 18px;
+    width: 2px;
+}
+.rightnav i{
+    text-align: center;
+    font-size: 17px;
+    margin-left: 10px;
+}
+.content{
+    display: flex;
+    gap: 30px;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+h1{
+    padding: 0px 20px;
+}
+.footer{
+    margin-top: 40px;
+}
+button{
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: black;
+    color: white;
+    transform: scale(1.4);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+}
+.purch button{
+    border-radius: 5px;
+    font-size: 14px;
+}
+.purch{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    margin-top: 60px;
+}

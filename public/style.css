@@ -1,0 +1,254 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+@font-face {
+    font-family: 'heads';
+    src: url('F1.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'main';
+    src: url('F2.woff2') format('woff2');
+}
+.announcements{
+    background-color: #242833;
+    padding: 6px 6px;
+    display: flex;
+    height: 25px;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.announcements h3{
+    animation-name: ann;
+    animation-duration: 15s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    color: white;
+    text-align: center;
+   margin-top: 4px;
+    font-size: 13px;
+    font-family: heads;
+    font-weight: 100;
+    letter-spacing: 1px;
+
+}
+.navbar{
+    height: 80px;
+    width: 100%;
+    background-color: #F5F5DC;
+    display: flex;
+    align-items: center;
+    
+   
+}
+.logo{
+    margin-left: 50px;
+}
+.logo h1{
+    white-space: nowrap;
+    font-family: main;
+    font-size: 30px;
+    font-weight: 300;
+}
+.tabs{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-right: 170px;
+}
+.tabs a{
+    font-size: 13px;
+    font-family: heads;
+    text-decoration: none;
+    color: black;
+   
+
+}
+.navbar a:hover{
+    text-decoration: underline;
+}
+.rightnav{
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 10px;
+    gap: 5px;
+}
+.rightnav h3{
+    font-size: 15px;
+    font-family: heads;
+    font-weight: 200;
+}
+.vertline{
+    background-color: black;
+    height: 18px;
+    width: 2px;
+}
+.rightnav i{
+    text-align: center;
+    font-size: 17px;
+    margin-left: 10px;
+}
+.main{
+    overflow: hidden;
+    position: relative;
+    height: 550px;
+    width: 100%;
+    background-color: red;
+}
+.img{
+    height: 100%;
+    width: 100%;
+    background-image: url(banner.png);
+    background-size: cover;
+    background-position: center;
+}
+.overlay{
+    position: absolute;
+    height: 780px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.text{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    
+}
+.text h3{
+    animation-name: texts;
+    animation-duration: 4s;
+    color: white;
+    font-family: heads;
+    font-size: 38px;
+    font-weight: 200;
+    text-align: center;
+}
+.text button{
+    padding: 10px 30px;
+    width: fit-content;
+    font-family: heads;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 17px;
+}
+.section2 h3{
+    color: black;
+    font-family: main;
+    font-size: 40px;
+    padding: 40px;
+    font-weight: 100;
+    animation-name: texts;
+    animation-duration: 2s;
+}
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 20px;
+    gap: 60px;
+}
+
+
+.products-container {
+    padding-left: 40px;
+    text-align: center;
+}
+
+.products-container img {
+    max-width: 200px;
+}
+@keyframes texts {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+@keyframes ann {
+    0%{
+        transform: translateX(1050px);
+    }    
+    100%{
+        transform: translateX(-1200px);
+    }
+}
+@keyframes shop {
+
+    0%{
+        transform: translateY(500px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+}
+.text button{
+    animation-name: shop;
+    animation-duration: 2s;
+}
+.section3{
+    height: 80vh;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    padding: 20px 20px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-right: none;
+    
+}
+.rght{
+    height: 100%;
+    width: 50%;
+    background-color: green;
+    overflow: hidden;
+    transform: scale(0.8);
+    border-radius: 20px;
+}
+.lft{
+    height: 100%;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.rght img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.texts2 h3{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    text-align: center;
+
+}
+.texts2 h5{
+    margin-top: 60px;
+    font-size: 20px;
+    color: gray;
+    text-align: center;
+}

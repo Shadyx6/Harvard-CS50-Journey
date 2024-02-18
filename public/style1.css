@@ -1,0 +1,57 @@
+.navbar{
+     height: 120px;
+    width: 100%;
+    background-color: #F5F5DC;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+.logo{
+    margin-left: 100px;
+}
+.logo h1{
+    white-space: nowrap;
+    font-family: main;
+    font-size: 45px;
+    font-weight: 300;
+}
+.tabs{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-right: 140px;
+}
+.tabs a{
+    font-size: 17px;
+    font-family: heads;
+    text-decoration: none;
+    color: black;
+
+}
+.navbar a:hover{
+    text-decoration: underline;
+}
+.rightnav{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    margin-left: 200px;
+
+}
+.rightnav h3{
+    font-size: 20px;
+    font-family: heads;
+    font-weight: 200;
+}
+.vertline{
+    background-color: black;
+    height: 20px;
+    width: 2px;
+}
+.rightnav i{
+    font-size: 25px;
+    margin-left: 10px;
+    
+}
